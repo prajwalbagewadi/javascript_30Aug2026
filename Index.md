@@ -25,7 +25,7 @@ Absolutely — if you want the **same book-index style for JavaScript**, here’
 - [✅] Scope
 - [✅] Block scope
 - [✅] Hoisting
-- [ ] Temporal Dead Zone
+- [✅] Temporal Dead Zone
 
 ### 3. Data Types
 
