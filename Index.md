@@ -18,13 +18,13 @@ Absolutely — if you want the **same book-index style for JavaScript**, here’
 
 ### 2. Variables
 
-- [ ] `var`
-- [ ] `let`
-- [ ] `const`
-- [ ] Variable naming
-- [ ] Scope
-- [ ] Block scope
-- [ ] Hoisting
+- [✅] `var`
+- [✅] `let`
+- [✅] `const`
+- [✅] Variable naming
+- [✅] Scope
+- [✅] Block scope
+- [✅] Hoisting
 - [ ] Temporal Dead Zone
 
 ### 3. Data Types
