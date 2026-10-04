@@ -52,3 +52,58 @@ console.log(greet);
 
 1. Mutable: (properties/elements can be added or altered)
 2. Memory: Stored by reference(a pointer to a memory location)
+
+## Primitive Code Eg:
+
+```
+// Primitive
+
+// 1. Numeric:
+
+//Number:
+//can store int + floting point.
+//limit 2^53.
+let num = 9007199254740993;
+console.log(`num = ${num}`);
+//output: num = 9007199254740992
+
+//Bigint:
+//Does not have a fixed limit. It can store a integer as large as available memory.
+let bigInt = 999999999999999999999999999999999999999998n;
+console.log(`bigInt = ${bigInt}`);
+
+// 2. Non-Numeric:
+
+//String: represents text.
+let str = "javascript";
+console.log(`str = ${str}`);
+
+//Boolean: can be 'true' or 'false'.
+let lights = true;
+if (lights) {
+  console.log("bool = Lights are ON.");
+} else {
+  console.log("bool = Lights are OFF.");
+}
+
+//Null: Means intentionally empty / No value.
+let user = null;
+console.log(`user = ${user}`);
+
+//Undefined: Means no value has been assigned.
+let password;
+console.log(`password = ${password}`);
+
+//Symbol: Creates a unique value.
+let symb = Symbol("graveyard");
+let symb1 = Symbol("graveyard");
+if (symb == symb1) {
+  console.log("symb matches symb1.");
+} else {
+  console.log("symb doesn't matches symb1.");
+}
+if (symb.description == "graveyard") {
+  console.log('symb matches "graveyard"');
+}
+
+```
