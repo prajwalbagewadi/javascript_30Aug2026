@@ -2,18 +2,19 @@
 
 ## Datatypes represent the different kinds of data-values we can use in the javascript.
 
-## As Javascript is a dynamically typed language, variables are not directly bound to a specific datatype. 
+## As Javascript is a dynamically typed language, variables are not directly bound to a specific datatype.
 
 ## Instead the Type is associated with the value currently stored in the variable.
 
-# Primitive Datatypes: 
+# Primitive Datatypes:
 
 Primitive values are immutable (they cannot be changed), hold a single simple value and are directly stored in the memory stack.
 
 Primitive values themselves are completely immutable and cannot be changed once created.
 
 However, there is a common confusion point:
-- Reassigning a variable is  not the same as mutating a value.
+
+- Reassigning a variable is not the same as mutating a value.
 
 ## variable reassignment Vs mutation:
 
@@ -39,3 +40,15 @@ console.log(greet);
 
 //output: hello.
 ```
+
+# Difference between Primitive and Non-Primitive:
+
+## Primitive:
+
+1. Mutability: Immutable (The values itself cannot change)
+2. Memory: Stored by value.
+
+## Non-Primitive:
+
+1. Mutable: (properties/elements can be added or altered)
+2. Memory: Stored by reference(a pointer to a memory location)
