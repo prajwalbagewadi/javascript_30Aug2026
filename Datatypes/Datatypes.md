@@ -107,3 +107,11 @@ if (symb.description == "graveyard") {
 }
 
 ```
+
+## Usecase of Symbol:
+
+1. Unique IDs: Create values that can never accidentally be the same.
+2. Object properties: Add special properties without conflicting with existing names.
+3. Libraries: Prevent your library's property names from clashing with the user's code.
+4. JavaScript customization: control special behaviours like iteration.
+5. Internal data: Store data that shouldn't be easily accessed by normal property names.
