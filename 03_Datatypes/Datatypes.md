@@ -53,7 +53,7 @@ console.log(greet);
 1. Mutable: (properties/elements can be added or altered)
 2. Memory: Stored by reference(a pointer to a memory location)
 
-## Primitive Code Eg:
+# Primitive Code Eg:
 
 ```
 // Primitive
@@ -115,3 +115,5 @@ if (symb.description == "graveyard") {
 3. Libraries: Prevent your library's property names from clashing with the user's code.
 4. JavaScript customization: control special behaviours like iteration.
 5. Internal data: Store data that shouldn't be easily accessed by normal property names.
+
+# Non-Primitive Code Eg:
