@@ -93,3 +93,41 @@ console.log(`getDay = ${curr.getDay()}`);
 console.log(`getHours = ${curr.getHours()}`);
 console.log(`getMinutes = ${curr.getMinutes()}`);
 console.log(`getSeconds = ${curr.getSeconds()}`);
+
+//RegExp(RegularExpression):
+//1. Pattern used to search, match, or validate text.
+//  For Example:
+//  - Check weather a string contains a number.
+//  - Check weather a username contains only letters.
+//  - Find a specific word in a sentence.
+//  - Validate an email format.
+//Think of RegExp as text-search pattern.
+//2. Create a RegExp
+//  - method 1: Regular expression literal
+let pat1 = /hello/;
+console.log(`pattern1 = ${pat1}`);
+//  - method 2: RegExp constructor.
+let pat2 = new RegExp("hello");
+console.log(`pattern2 = ${pat2}`);
+//3. Common syntax: /pattern/flags
+//  - '/' marks the beginning and end of the pattern.
+//  - 'pattern' the text or rule to search for.
+//  - 'flags' optional settings that change how matching works.
+//4. Basic matching:
+//  - .test() method returns a Boolean value:
+//  - true - a match was found, false - no match was found.
+let str = "hello world.";
+console.log(`pat1 matches the str = ${pat1.test(str)}`);
+//Notice that the entire string doesn't need to match. The string "hello world" contains "hello", so the result is true.
+//5. Important RegExp symbols:
+//Symbol\Meaning\Example
+// '.'\Any one character between 'h' and 't'\/h.t/
+// '^'\Means the string must start with "hello"\/^hello/
+// '$'\Means the string must end with "hello"\/hello$/
+// '*'\Matches 'a' followed by zero or more 'b' characters\/ab*/
+// '+'\Matches 'a' followed by one or more 'b' characters\/ab+/
+// '?'\Matches 'color' or 'colour', the letter 'u' zero or one occurance(optional).\/colou?r/
+// '\d'\Matches any digit from 0 to 9.\/\d/
+// '\w'\Matches letter(A-Z,a-z), digit(0-9) or underscore(_)\/\w/
+// '\s'\Matches whitespace(space,tab, or newline).\/\s/
+//6. Character sets[]:
