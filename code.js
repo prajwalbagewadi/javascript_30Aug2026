@@ -131,3 +131,5 @@ console.log(`pat1 matches the str = ${pat1.test(str)}`);
 // '\w'\Matches letter(A-Z,a-z), digit(0-9) or underscore(_)\/\w/
 // '\s'\Matches whitespace(space,tab, or newline).\/\s/
 //6. Character sets[]:
+//7. RegExp flags:
+//8. Useful RegExp methods:
