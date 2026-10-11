@@ -102,6 +102,7 @@ console.log(`getSeconds = ${curr.getSeconds()}`);
 //  - Find a specific word in a sentence.
 //  - Validate an email format.
 //Think of RegExp as text-search pattern.
+
 //2. Create a RegExp
 //  - method 1: Regular expression literal
 let pat1 = /hello/;
@@ -109,16 +110,19 @@ console.log(`pattern1 = ${pat1}`);
 //  - method 2: RegExp constructor.
 let pat2 = new RegExp("hello");
 console.log(`pattern2 = ${pat2}`);
+
 //3. Common syntax: /pattern/flags
 //  - '/' marks the beginning and end of the pattern.
 //  - 'pattern' the text or rule to search for.
 //  - 'flags' optional settings that change how matching works.
+
 //4. Basic matching:
 //  - .test() method returns a Boolean value:
 //  - true - a match was found, false - no match was found.
 let str = "hello world.";
 console.log(`pat1 matches the str = ${pat1.test(str)}`);
 //Notice that the entire string doesn't need to match. The string "hello world" contains "hello", so the result is true.
+
 //5. Important RegExp symbols:
 //Symbol\Meaning\Example
 // '.'\Any one character between 'h' and 't'\/h.t/
@@ -126,10 +130,60 @@ console.log(`pat1 matches the str = ${pat1.test(str)}`);
 // '$'\Means the string must end with "hello"\/hello$/
 // '*'\Matches 'a' followed by zero or more 'b' characters\/ab*/
 // '+'\Matches 'a' followed by one or more 'b' characters\/ab+/
-// '?'\Matches 'color' or 'colour', the letter 'u' zero or one occurance(optional).\/colou?r/
+// '?'\Matches 'color' or 'colour', the letter 'u' zero or one occurance(optional) and must contain 'r'.\/colou?r/
 // '\d'\Matches any digit from 0 to 9.\/\d/
 // '\w'\Matches letter(A-Z,a-z), digit(0-9) or underscore(_)\/\w/
 // '\s'\Matches whitespace(space,tab, or newline).\/\s/
-//6. Character sets[]:
+let symb1 = /h.t/;
+console.log(`symb1 matches hot = ${symb1.test("hot")}`);
+let symb2 = /^4/;
+console.log(`symb2 matches 4683 = ${symb2.test("4683")}`);
+let symb3 = /4$/;
+console.log(`symb3 matches 4664 = ${symb3.test("4664")}`);
+let symb4 = /ab*/;
+console.log(`symb4 matches aaa = ${symb4.test("aaa")}`);
+let symb5 = /ab+/;
+console.log(`symb5 matches aab = ${symb5.test("aab")}`);
+let symb6 = /lo?yalty/;
+console.log(`symb6 matches lyal = ${symb6.test("lyalty")}`);
+let symb7 = /\d/;
+console.log(`symb7 matches Aug21 = ${symb7.test("Aug21")}`);
+let symb8 = /\w/;
+console.log(`symb8 matches Ab_ = ${symb8.test("Ab_")}`);
+let symb9 = /\s/;
+console.log(`symb9 matches A b = ${symb9.test("A b")}`);
+
+//6. Character sets[]: Square brackets let you specify characters are allowed.
+//  - /[abc]/ this matches any one of these characters: a,b, or c.
+//  - [a-z] lowercase letters. [A-Z] Uppercase letters. [0-9] Digits. [a-zA-Z] Lowercase or uppercase letters.
+console.log(`[A-Z] = ${/[A-Z]/.test("hEllo")}`);
+console.log(`[a-z] = ${/[a-z]/.test("hEllo")}`);
+console.log(`[0-9] = ${/[0-9]/.test("hEllo21")}`);
+
 //7. RegExp flags:
+// /pattern/flags
+// flag\meaning
+// i\case-insenstive:
+// - Matches text regardless of upper or lower case.
+let symbf1 = /hello/i;
+console.log(`symbf1 matches hello = ${symbf1.test("hello")}`);
+// g\Global matching:
+// - Finds all the occurances instead of stopping at the first match when using methods such as .match()
+let symbf2 = /cat/g;
+console.log(`symbf2 matches 'cat cat cat' = ${"cat cat cat".match(symbf2)}`);
+// m\Multiline matching:
+// - Makes ^ and $ match the beginning and end of each line, rather than only the entire string.
+let symbf3 = /^hello/m;
+console.log(
+  `symbf3 matches \"world\nhello\" = ${symbf3.test("world\nhello")}"`,
+);
+
 //8. Useful RegExp methods:
+//.test(): checks if a match exits returns true/false.
+console.log(`.test() for /\d/ = ${/\d/.test("abc5")}`);
+//.match(): Returns the matched text. Syntax string.match(pattern)
+console.log(`.match() for b = ${"abc".match(/b/)}`);
+//.replace(): Replaces matched text. Syntax string.replace(pattern,replaceString)
+console.log(`.replace cat with dog = ${"cat".replace(/cat/, "dog")}`);
+//.search(): Returns the position(index) of the first match (-1 if none). Syntax string.search(pattern)
+console.log(`.search() 5 = ${"abc5".search(/\d/)}`);
