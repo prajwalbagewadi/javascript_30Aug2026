@@ -29,12 +29,12 @@ Absolutely — if you want the **same book-index style for JavaScript**, here’
 
 ### 3. Data Types
 
-- [ ] String
-- [ ] Number
-- [ ] BigInt
-- [ ] Boolean
-- [ ] `undefined`
-- [ ] `null`
+- [✅] String
+- [✅] Number
+- [✅] BigInt
+- [✅] Boolean
+- [✅] `undefined`
+- [✅] `null`
 - [ ] Symbol
 - [ ] Object
 - [ ] Primitive vs reference types

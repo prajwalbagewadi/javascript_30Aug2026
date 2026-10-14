@@ -1,0 +1,128 @@
+# What is Function?
+
+- Def: A function is reusable block of code that performs a task when called.
+- Imagine a function as a machine:
+  - Input: Data you provide.
+  - Processing: The function's code.
+  - Output: A value it may return.
+
+## Syntax:
+
+```
+function funName(parameters){
+    //code to execute
+    return results;
+}
+
+//function call
+funName(arguments);
+```
+
+## Example:
+
+```
+//function
+function add(a, b) {
+  let result;
+  result = a + b;
+  return result;
+}
+//call
+console.log(`function call = ${add(5, 5)}`);
+```
+
+## Working:
+
+1. function add(a,b) defines the function.
+2. add(10,20) calls it.
+3. 'a' receives 10; 'b' receives 30;
+4. Define result.
+5. Store a+b in result.
+6. return result.
+7. display the value of result in function call.
+
+# Parameters vs Arguments:
+
+- Def: Parameters are variable names in a function definition. Arguments are the actual values supplies when calling it.
+
+```
+function greet(name) {
+  //name = parameter
+  return `Hello, ${name}`;
+}
+
+//call
+console.log(greet("Prajwal")); // "Prajwal" = Argument
+```
+
+## Parameters:
+
+- Declared in the function definition.
+- Act as Local variables.
+- name in function greet(name).
+
+## Arguments:
+
+- Supplied during a call.
+- Provide input values.
+- 'Prajwal' in greet("prajwal");
+
+# Default parameters:
+
+- Def: A default parameter provides a fallback value when an argument is omitted or explicitly passed as undefined.
+
+- Note: null does not activate the default value.
+
+```
+// function greet(name = "Guest") {
+//   console.log(`Hello ${name}`);
+//   return 0;
+// }
+
+function greet(name = "Guest") {
+  return `Hello ${name}`;
+}
+
+console.log("1", greet("Alex"));
+console.log("2", greet());
+console.log("3", greet(undefined));
+console.log("4", greet(null));
+
+```
+
+# Rest parameters:
+
+- Def: A Rest parameter collects remaining arguments into an array.
+- '...numbers' is an actual array.
+- A rest parameter must be the last parameter.
+- Useful when the number of inputs is variable.
+
+```
+function sum(...numbers) {
+  console.log(numbers);
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
+}
+
+console.log(sum(9, 9, 9));
+```
+
+## The arguments object:
+
+- Regular functions have an array-like arguments object containing the arguments passed to them.
+
+```
+function showArgs(a, b) {
+  console.log(`arguments = ${arguments}`);
+  console.log(arguments[0]);
+  console.log(arguments[1]);
+  console.log(`arguments.length = ${arguments.length}`);
+  console.log(`isArray = ${Array.isArray(arguments)}`);
+}
+
+showArgs("UDY", 25);
+
+```
