@@ -150,3 +150,45 @@ showArgs("UDY", 25);
 - A return statement immediately exits the current function.
 
 # Function Declaration
+
+- Def: A function declaration defines a function using the 'function' keyword and a name.
+- Has a function name.
+- Can generally be called before its declaration because function declarations are hoisted.
+- Useful for named = identifiable by its name, reusable operations.
+
+# Function expression:
+
+- Def: A function expression(any piece of code that produces a value) creates a function as part of an expression often assigning it to a variable.
+- Examples:
+
+```
+//Math exp:
+console.log(10+5); //produces 15
+
+//Variable exp:
+let age = 25;
+console.log(age); //produces 25
+
+//Functional exp:
+const greet = function(){
+  console.log("helloWorld!");
+} //produces a function that is assigned to greet
+```
+
+```
+//simple function
+function add(a, b) {
+  return a + b;
+}
+
+//function expression
+var sum = function (a, b) {
+  return a + b;
+};
+
+//calls
+console.log(`simple function = ${add(2, 3)}`);
+console.log(`function expression = ${sum(2, 3)}`);
+```
+
+- Note: The Function is anoymous here, but a function expression can also have a name.
