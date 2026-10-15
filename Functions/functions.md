@@ -126,3 +126,27 @@ function showArgs(a, b) {
 showArgs("UDY", 25);
 
 ```
+
+- Note: Arrow functions do not have their own arguments objects. Prefer rest parameters(...args) in modern code.
+
+# Difference between return and console.log():
+
+- Def: return sends a value back to the caller.
+  Console.log() displays a value in the console.
+- Quick recall: 'return' is for your program. 'console.log()' is for you to inspect your program.
+
+# Function execution flow:
+
+- Execution order:
+
+1. The function is defined.
+2. The call 'sum(4,5)' begins execution.
+3. a = 4, b = 5.
+4. result = 9.
+5. return result gives 9 to the caller .
+6. answer becomes 9.
+7. The console displays 9.
+
+- A return statement immediately exits the current function.
+
+# Function Declaration
