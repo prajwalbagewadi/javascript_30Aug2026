@@ -192,3 +192,76 @@ console.log(`function expression = ${sum(2, 3)}`);
 ```
 
 - Note: The Function is anoymous here, but a function expression can also have a name.
+
+## Named function expression:
+
+- Named function expression creates a function with its own name, usually assigned to a variable.
+- Usecase: Recursion and debugging.
+
+```
+const msg = function sayHello(name) {
+  //sayHello("ksp");
+  return `Hello ${name}`;
+};
+
+console.log(`var exp = ${msg("Praj")}`);
+console.log(`fun name call = ${sayHello("Praj")}`); //Reference error not defined.
+```
+
+## Why? (named function expression):
+
+- 'msg' is the variable holding the function.
+- 'sayHello' is the function's internal name.
+- In 'named function expression', the function name is acessible inside function itself, but not outside it.
+
+```
+//named function expression for recursion
+let num = function rev(a) {
+  if (a === 0) {
+    return "num is 0";
+  }
+  console.log(`num = ${a}`);
+  //rev(a - 1); // returns undefined.
+  return rev((a = a - 1));
+  //return a;
+};
+
+console.log(num(5));
+```
+
+# Expression -> produces a value.
+
+# Statement -> performs an instruction
+
+# Declaration vs Expression:
+
+## Declaration:
+
+- syntax: function name() {}
+- Name: required.
+- Hoisting: function is available before its declaration in its scope.
+- Reassignment: function declaration isn't a variable assignment you can freely reassign in the same way.
+
+```
+greet();
+
+function greet() {
+  console.log("hello");
+}
+
+greet = 20;
+
+console.log(greet()); //TypeError: greet is not functional
+console.log(greet);
+
+```
+
+- Common use: Reusable named operations.
+
+## Expression assigned to const:
+
+- syntax: const name = function() {}
+- name: Optional on the function itself.
+- Hoisting: Variable cannot be accessed before initialization
+- Reassignment: Const binding cannot be reassigned
+- Common use: callbacks and assigned behaviour
